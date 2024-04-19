@@ -1,0 +1,37 @@
+# version: '3'
+# services:
+#   web:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.dev
+#     ports:
+#       - "4200:4200"
+#     volumes:
+#       - /app/node_modules
+#       - .:/app
+  
+#   tests:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.dev
+    
+#     volumes:
+#       - /app/node_modules
+#       - .:/app
+    
+#     command: ["npm", "run", "test"]
+
+
+# yml for production with nginx 
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4200:80
+
+
+volumes:
+  angularngixvolume:
