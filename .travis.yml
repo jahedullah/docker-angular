@@ -4,3 +4,5 @@ services:
 
 before-install:
   - docker build -t jahedul/docker-angular -f Dockerfile .
+
+language: generic
