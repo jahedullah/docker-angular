@@ -1,5 +1,5 @@
 # Use an official Node.js image as a base . this is production build file
-FROM node:latest as builder
+FROM node:18-bullseye as builder
 
 # Set the working directory
 WORKDIR '/app'
