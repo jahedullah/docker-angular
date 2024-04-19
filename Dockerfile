@@ -27,7 +27,7 @@ RUN npm run build --prod
 # CMD ["ng", "serve", "--host", "0.0.0.0"]
 # CMD ["ng", "serve"]
 
-FROM nginx:latest
+FROM nginx:1.23-alpine
 
 
 
@@ -35,4 +35,4 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 #this is the path where my browser is.
 COPY --from=builder /app/dist/test-app1/browser /usr/share/nginx/html/
 
-EXPOSE 80
+# EXPOSE 80
