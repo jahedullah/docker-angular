@@ -3,5 +3,4 @@ services:
   - docker
 
 before-install:
-  - docker build -t jahedul/docker-angular -f Dockerfile.dev .
-  
+  - docker build -t jahedul/docker-angular -f Dockerfile .
