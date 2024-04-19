@@ -8,11 +8,12 @@ WORKDIR '/app'
 # Copy package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
 
-# # Install Angular CLI globally (optional, if you haven't installed it globally yet)
+# Install Angular CLI globally (optional, if you haven't installed it globally yet)
 # RUN npm install -g @angular/cli
 
 # Install dependencies. ci means clean install
-RUN npm ci
+# RUN npm ci
+RUN npm install -f
 
 # Copy the rest of the application code
 COPY . .
