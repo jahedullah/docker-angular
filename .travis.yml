@@ -3,6 +3,9 @@ services:
   - docker
 
 before-install:
-  - docker build -t jahedul/docker-angular -f Dockerfile .
+  - docker build -t jahedul/docker-angular -f Dockerfile.dev .
+
+script:
+  - docker run jahedul/docker-angular ng test --code-coverage=true
 
 language: generic
