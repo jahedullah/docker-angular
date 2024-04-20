@@ -5,7 +5,9 @@ services:
 before-install:
   - docker build -t jahedul/docker-angular -f Dockerfile.dev .
 
+# here the codeCoverage is made true to cover the test summary and 
+# the watch is kept to false to disable the watch mode and exit after the test.
 script:
-  - docker run jahedul/docker-angular ng test --code-coverage=true
+  - docker run jahedul/docker-angular ng test --code-coverage=true --watch=false
 
 language: generic
