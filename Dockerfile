@@ -35,4 +35,4 @@ COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 #this is the path where my browser is.
 COPY --from=builder /app/dist/test-app1/browser /usr/share/nginx/html/
 
-# EXPOSE 80
+EXPOSE 80

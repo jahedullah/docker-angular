@@ -10,4 +10,17 @@ before-install:
 script:
   - docker run jahedul/docker-angular ng test --code-coverage=true --watch=false
 
+deploy:
+  provide: elasticbeanstalk
+  region: "us-east-1"
+  app: "Docker-angular-test-app"
+  env: "Docker-angular-test-app-env"
+  bucket_name: "elasticbeanstalk-us-east-1-135391448071"
+  bucket_path: "Docker-angular-test-app"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+  secure: $AWS_SECRET_KEY
+
 language: generic
